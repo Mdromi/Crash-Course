@@ -1,0 +1,28 @@
+===========================
+MongoDB Basics Command
+===========================
+1. Start MongoDB Compass -> [ mongodb-compass ]
+2. Start MongoDB -> [ sudo service mongod start ]
+3. Verify that MongoDB -> [ sudo service mongod status ]
+4. Stop MongoDB -> [ sudo service mongod stop ]
+5. Restart MongoDB -> [ sudo service mongod restart ]
+6. Stop MongoDB -> [ sudo service mongod stop ]
+
+// Basics
+1. show dbs -> Show all DataBase
+2. use DB Name -> Switch DB
+3. db.createCollection('videos') -> Createe DB Collecction
+4. show collections -> Show collections of current DB
+5. db.videos.drop() -> Delete collection
+6. db.dropDatabase() -> Delete current DB
+7. db -> Show current DataBase
+
+// Create
+8. db.product.insertOne({name: 'm 40', brand: 'Samsung', price: 250, catagory: 'mobile'}) -> Create item
+9. db.product.find() -> Find all items on this collection
+
+// Update
+10. db.product.updateOne({name: 'u10'}, {$set: {brand: 'oppo'}}) -> Update collection item
+
+// Delete
+11. db.product.deleteOne({brand: 'Apple'}) -> Delete collection item
