@@ -24,9 +24,9 @@
 - <a href="#20"> Constructor life cycle method </a> 
 - <a href="#21"> Render life cycle in React js </a> 
 - <a href="#22"> Component did mount react js life cycle </a> 
-- <a href="#23"> Component did update react js life cycle </a> 
-- <a href="#24"> Should Component update in react js life cycle </a> 
-- <a href="#25"> ComponentWillUnmount in react js </a> 
+- <a href="#22"> Component did update react js life cycle </a> 
+- <a href="#22"> Should Component update in react js life cycle </a> 
+- <a href="#22"> ComponentWillUnmount in react js </a> 
 - <a href="#26"> Hooks in react js </a> 
 - <a href="#27"> useEffect hook in react js </a> 
 - <a href="#28"> useEffect with state and props in react js </a> 
@@ -36,7 +36,7 @@
 - <a href="#32"> List with bootstrap in react js </a> 
 - <a href="#33"> Nested list with a nested array in react tutorial </a> 
 - <a href="#34"> How to resue component in reactJs </a> 
-- <a href="#35"> Nested list with a nested array in react tutorial </a> 
+- <a href="#35"> React Fragment </a> 
 - <a href="#36"> React js send data child to parent </a> 
 - <a href="#37"> Pure Component in React js </a> 
 - <a href="#38"> Use memo in react functional component </a> 
@@ -447,9 +447,103 @@ __Life Cycle Component 3 State:__
 
 <a href="#table-of-contents">[↑] Back to top</a>
 
-<h3 id=""> </h3>
-<h3 id=""> </h3>
-<h3 id=""> </h3>
+<h3 id="21"> Render life cycle in React js </h3>
+
+__Why use Render__
+- It's use for updated value render
+  - When Component Build than rerender again
+  - When state or props update than rerender again
+
+Example `User.js`
+```JSx
+import React, {Component} from 'react'
+
+class User extends Component {
+    constructor() {
+        super();
+        this.state = {
+            email: `mdr@gmail.com`
+        }
+    }
+    render() {
+        console.log(`Render Method`, this.state.email);
+        return(
+            <div>
+                <h1>User Component</h1>
+                <button onClick={()=>this.setState({email: `123@gmail.com`})}>Call Data Function</button>
+            </div>
+        )
+    }
+}
+export default User;
+```
+import `App.js`
+```JSx
+function App() {
+  const [data, setData] = useState(0)
+  return (
+    <div className="App">
+      <h1>Render Method </h1>
+      <User data={data}/>
+    </div>
+  );
+}
+```
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="22">Component did mount react js life cycle  </h3>
+
+__All Component Method__
+- constructor()
+- render()
+- componentDidMount()
+- shouldComponentUpdate()
+- componentDidUpdate()
+- componentWillUnmount()
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="26"> Hooks in react js </h3>
+It allows you to use state and other React features without writing a class. Hooks are the functions which "hook into" React state and lifecycle features from function components. It does not work inside classes.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="35"> React Fragment </h3>
+A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="37"> Pure Component in React js </h3>
+A React component is considered pure if it renders the same output for the same state and props. For this type of class component, React provides the PureComponent base class. Class components that extend the React. PureComponent class are treated as pure components.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="38"> Use memo in react functional component </h3>
+React.memo is a higher order component. If your component renders the same result given the same props, you can wrap it in a call to React.memo for a performance boost in some cases by memoizing the result. This means that React will skip rendering the component, and reuse the last rendered result.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="39"> Ref in React js </h3>
+
+Refs `provide a way to access DOM nodes or React elements created in the render method.` In the typical React dataflow, props are the only way that parent components interact with their children.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="42"> React js Controlled Component </h3>
+In React, Controlled Components are those in ate. It takes its current value through props and makes changes through callbacks like onClick,onChange, etc.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="43"> React js Uncontrolled Component </h3>
+Since an uncontrolled component keeps the source of truth in the DOM, it is sometimes easier to integrate React and non-React code when using uncontrolled components. It can also be slightly less code if you want to be quick and dirty. Otherwise, you should usually use controlled components.
+
+<a href="#table-of-contents">[↑] Back to top</a> 
+
+<h3 id="44"> React js High order component </h3>
+
+We use higher order components `to primarily reuse logic in React apps.` However, they have to render some UI. Hence, HOCs are inconvenient when you want to share some non-visual logic. In such a case, React hooks seem to be a perfect mechanism for code reuse.
+
 <h3 id=""> </h3>
 <h3 id=""> </h3>
 <h3 id=""> </h3>
