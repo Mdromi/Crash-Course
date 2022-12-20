@@ -551,10 +551,3 @@ We use higher order components `to primarily reuse logic in React apps.` However
 Using previous state `allows us to use the previous value of state without having to call state.` It keeps track of what state was previously and changes state based on what it was before.
 
 <a href="#table-of-contents">[↑] Back to top</a> 
-<h3 id=""> </h3>
-<h3 id=""> </h3>
-<h3 id=""> </h3>
-<h3 id=""> </h3>
-
-<a href="#table-of-contents">[↑] Back to top</a> 
-
