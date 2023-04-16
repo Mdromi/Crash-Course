@@ -1,0 +1,50 @@
+
+GET http://localhost:4000/health
+
+###
+# create a new player and save into db
+POST http://localhost:4000/
+Content-Type: application/json
+
+{
+    "name": "Ojail",
+    "country": "BD",
+    "rank": 4
+}
+
+###
+# find all players
+GET http://localhost:4000/
+
+###
+# find a single player
+GET http://localhost:4000/ohHH9Ucuh
+
+
+###
+# update player
+PATCH  http://localhost:4000/ohHH9Ucuh
+Content-Type: application/json
+
+{
+    "name": "Ojail Ahmed",
+    "country": "Turky",
+    "rank": 44
+}
+
+
+
+###
+# update or create player
+PUT  http://localhost:4000/Os4b9_9_t
+Content-Type: application/json
+
+{
+    "name": "Ojail Ojail Ahmed",
+    "country": "Turky",
+    "rank": 44
+}
+
+###
+# delete player from db
+DELETE http://localhost:4000/d7uOi2VPx
