@@ -1,0 +1,12 @@
+go build && ./p1-rss-aggregator
+export PORT=8000
+go mod vendor
+go mod tidy
+
+
+==========
+Package
+==========
+go get github.com/joho/godotenv
+go get github.com/go-chi/chi
+go get github.com/go-chi/cors

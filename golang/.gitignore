@@ -19,6 +19,10 @@ _obj
 _test
 _testmain.go
 
+.vscode
+rssag
+.env
+
 /VERSION.cache
 /bin/
 /build.out
