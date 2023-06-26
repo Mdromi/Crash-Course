@@ -1,7 +1,67 @@
-GET  http://localhost:8080/
+GET  http://localhost:8989/
 
 ###
-GET  http://localhost:8080/v1/healthz
+GET  http://localhost:8989/v1/healthz
 
 ###
-GET  http://localhost:8080/v1/err
+GET  http://localhost:8989/v1/err
+
+###
+# create users
+POST http://localhost:8989/v1/users
+
+content-type: application/json
+{
+    "name": "Romi"
+}
+
+
+###
+# get users
+GET http://localhost:8989/v1/users
+Content-Type: application/xml
+Authorization: ApiKey 1437a252a5663f933e01bea5e6e679916a104dfedde8a4079c6b6485a7861179
+
+###
+# create feed
+POST http://localhost:8989/v1/feeds
+Content-Type: application/xml
+Authorization: ApiKey 606a8031734d96c3d6386eba773d4be1b0d526276091f6db28ae251460b132bc
+
+{
+    "name": "Names of Blog - 3",
+    "url": "https://bitasfdafa.ly/LOP805a"
+}
+
+###
+# get feeds
+GET http://localhost:8989/v1/feeds
+
+###
+# feed follow
+POST http://localhost:8989/v1/feed_follows
+Content-Type: application/xml
+Authorization: ApiKey 606a8031734d96c3d6386eba773d4be1b0d526276091f6db28ae251460b132bc
+
+{
+    "feed_id": "f312d0e8-2893-482f-a962-5c84a7521682"
+}
+
+###
+# get feed follow
+GET http://localhost:8989/v1/feed_follows
+Content-Type: application/xml
+Authorization: ApiKey 606a8031734d96c3d6386eba773d4be1b0d526276091f6db28ae251460b132bc
+
+###
+# delete feed follow
+DELETE http://localhost:8989/v1/feed_follows/2d2de02b-db41-4df2-89eb-adebde68c8b9
+Content-Type: application/xml
+Authorization: ApiKey 606a8031734d96c3d6386eba773d4be1b0d526276091f6db28ae251460b132bc
+
+
+###
+# get posts
+GET http://localhost:8989/v1/posts
+Content-Type: application/xml
+Authorization: ApiKey 606a8031734d96c3d6386eba773d4be1b0d526276091f6db28ae251460b132bc

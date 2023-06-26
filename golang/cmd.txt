@@ -1,7 +1,19 @@
 go build && ./p1-rss-aggregator
-export PORT=8000
+
+===========
+CMD
+===========
 go mod vendor
 go mod tidy
+export PORT=8000
+goose postgres postgres://mdromi:md@romI-@localhost:5432/rssag up
+sudo nano /etc/nginx/nginx.conf // edit lock file 
+sqlc generate --config sqlc.yaml
+
+docker run -p 80:80 -e "PGADMIN_DEFAULT_EMAIL=mdromi44653@gmail.com" -e "PGADMIN_DEFAULT_PASSWORD=123post@Sql" -d dpage/pgadmin4
+
+CREATE DATABASE dbname;
+
 
 
 ==========
@@ -10,3 +22,32 @@ Package
 go get github.com/joho/godotenv
 go get github.com/go-chi/chi
 go get github.com/go-chi/cors
+go get github.com/kyleconroy/sqlc/cmd/sqlc@latest
+go get -u github.com/pressly/goose/cmd/goose@latest
+
+
+
+
+
+
+
+
+
+
+====================
+Testing
+====================
+GRANT ALL PRIVILEGES ON DATABASE book_keeper TO mdromi;
+
+ALTER USER mdromi PASSWORD 'mdromiRssag';
+sudo nano /etc/postgresql/15/main/pg_hba.conf
+
+ALTER USER mdromi WITH PASSWORD 'mdromiRssag';
+GRANT USAGE ON SCHEMA public TO mdromi;
+
+goose postgres postgres://mdromi:mdromiRssag@localhost:5432/rssag up
+goose postgres "user=mdromi password=mdromiRssag dbname=rssag sslmode=disable" up status
+
+psql -U postgres -d rssag
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO mdromi;
+cd /etc/postgresql/15/main/

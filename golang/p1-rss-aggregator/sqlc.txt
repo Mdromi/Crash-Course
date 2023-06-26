@@ -1,0 +1,47 @@
+# version: "1"
+# packages:
+#   - name: "db"
+#     path: "./sql"
+#     schema: "./sql/schema"
+#     queries: "./sql/queries"
+#     engine: "postgresql"
+#     generate:
+#       - type: "go"
+#         dir: "./internal/database"
+
+version: "1"
+packages:
+  - name: "db"
+    path: "internal/db"
+    queries: "./sql/queries/"
+    schema: "./sql/schema/"
+    engine: "postgresql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: false
+    emit_exact_table_names: false
+
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./sql/queries/"
+    schema: "./sql/schema/"
+    gen:
+      go:
+        package: "./internal/database"
+        out: "./internal/database"
+
+# version: "2"
+# packages:
+#   - name: "db"
+#     schema: "./sql/schema/*.sql"
+#     queries: "./sql/queries/*.sql"
+#     engine: "postgresql"
+#     emit_json_tags: true
+#     emit_prepared_queries: true
+#     emit_exact_table_names: true
+#     emit_interface_marker: true
+#     emit_empty_slices: true
+#     generate:
+#       - type: "go"
+#         dir: "./internal/database"
