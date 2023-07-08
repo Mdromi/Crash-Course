@@ -1,0 +1,5 @@
+example.com
+google.com
+openai.com
+stackoverflow.com
+github.com

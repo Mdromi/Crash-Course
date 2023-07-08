@@ -1,0 +1,47 @@
+[
+  {
+    "domain": "example.com",
+    "hasMX": true,
+    "hasSPF": true,
+    "spfRecord": "v=spf1 -all",
+    "hasDMARC": false,
+    "dmarcRecord": "",
+    "errorMessage": "Error looking up DMARC records: lookup _dmarc.example.com on 127.0.0.53:53: no such host"
+  },
+  {
+    "domain": "google.com",
+    "hasMX": true,
+    "hasSPF": false,
+    "spfRecord": "",
+    "hasDMARC": false,
+    "dmarcRecord": "",
+    "errorMessage": "Error looking up TXT records: lookup google.com on 127.0.0.53:53: no such host"
+  },
+  {
+    "domain": "openai.com",
+    "hasMX": true,
+    "hasSPF": false,
+    "spfRecord": "",
+    "hasDMARC": false,
+    "dmarcRecord": "",
+    "errorMessage": "Error looking up TXT records: lookup openai.com on 127.0.0.53:53: no such host"
+  },
+  {
+    "domain": "stackoverflow.com",
+    "hasMX": true,
+    "hasSPF": false,
+    "spfRecord": "",
+    "hasDMARC": false,
+    "dmarcRecord": "",
+    "errorMessage": "Error looking up TXT records: lookup stackoverflow.com on 127.0.0.53:53: no such host"
+  },
+  {
+    "domain": "github.com",
+    "hasMX": true,
+    "hasSPF": false,
+    "spfRecord": "",
+    "hasDMARC": false,
+    "dmarcRecord": "",
+    "errorMessage": "Error looking up TXT records: lookup github.com on 127.0.0.53:53: no such host"
+  }
+]
