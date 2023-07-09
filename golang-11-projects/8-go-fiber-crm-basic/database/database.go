@@ -1,10 +1,5 @@
 package database
 
-// import (
-// 	"gorm.io/gorm"
-// 	_"gorm.io/driver/sqlite"
-//   )
+import "gorm.io/gorm"
 
-// var(
-// 	DBcon *gorm.DB
-// )
+var DBcon *gorm.DB
